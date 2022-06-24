@@ -2,6 +2,16 @@
 
 Example travel landing page.
 
+Keywords:
+
+- Typescript
+- React
+- Next.js
+- Tailwind CSS
+- Headless UI
+- Heroicons
+- Prettier
+
 ### `Before launch`
 
 ```

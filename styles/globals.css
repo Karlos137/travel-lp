@@ -44,3 +44,7 @@ a {
   cursor: pointer;
 }
 /* CSS RESET END */
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
