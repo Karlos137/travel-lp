@@ -10,6 +10,7 @@ Keywords:
 - Tailwind CSS
 - Headless UI
 - Heroicons
+- Framer Motion
 - Prettier
 
 ### `Before launch`

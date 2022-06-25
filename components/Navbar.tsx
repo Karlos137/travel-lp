@@ -1,3 +1,6 @@
+// Framer Motion
+import { motion } from "framer-motion"
+
 // Headless UI
 import { Disclosure } from "@headlessui/react"
 
@@ -12,6 +15,24 @@ const NavigationItems = [
   { name: "About us", href: "#", active: false },
 ]
 const Navbar = () => {
+  const navigationItemsVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  }
+
+  const navigationItemVariants = {
+    hidden: {
+      x: "100vw",
+    },
+    visible: {
+      x: 0,
+      transition: { type: "spring", bounce: 0.18, duration: 1.9 },
+    },
+  }
   return (
     <Disclosure as="nav" className="bg-white">
       {({ open }) => (
@@ -25,13 +46,23 @@ const Navbar = () => {
               )}
             </Disclosure.Button>
             <a href="#" title="Logo">
-              <h1 className="text-lg font-semibold text-center">Travel</h1>
+              <h1 className="w-0 overflow-hidden text-lg font-semibold text-center animate-typewriter">
+                Travel
+              </h1>
             </a>
 
-            <ul className="hidden gap-2 md:flex">
+            <motion.ul
+              className="hidden gap-2 md:flex"
+              variants={navigationItemsVariants}
+              initial="hidden"
+              animate="visible"
+            >
               {NavigationItems.map(navigationItem => {
                 return (
-                  <li key={navigationItem.name}>
+                  <motion.li
+                    key={navigationItem.name}
+                    variants={navigationItemVariants}
+                  >
                     <a
                       href={navigationItem.href}
                       title={navigationItem.name}
@@ -43,10 +74,10 @@ const Navbar = () => {
                     >
                       {navigationItem.name}
                     </a>
-                  </li>
+                  </motion.li>
                 )
               })}
-            </ul>
+            </motion.ul>
           </div>
           <Disclosure.Panel className="md:hidden">
             <ul className="px-2 pt-2 pb-3 space-y-1">
