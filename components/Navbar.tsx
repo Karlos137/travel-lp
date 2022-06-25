@@ -8,12 +8,9 @@ import { Disclosure } from "@headlessui/react"
 import { MenuAlt3Icon } from "@heroicons/react/outline"
 import { XIcon } from "@heroicons/react/outline"
 
-const NavigationItems = [
-  { name: "Home", href: "#", active: true },
-  { name: "Discover", href: "#", active: false },
-  { name: "Explore", href: "#", active: false },
-  { name: "About us", href: "#", active: false },
-]
+// Data
+import { navigationItems } from "../data"
+
 const Navbar = () => {
   const navigationItemsVariants = {
     hidden: {},
@@ -57,7 +54,7 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
             >
-              {NavigationItems.map(navigationItem => {
+              {navigationItems.map(navigationItem => {
                 return (
                   <motion.li
                     key={navigationItem.name}
@@ -81,7 +78,7 @@ const Navbar = () => {
           </div>
           <Disclosure.Panel className="md:hidden">
             <ul className="px-2 pt-2 pb-3 space-y-1">
-              {NavigationItems.map(navigationItem => (
+              {navigationItems.map(navigationItem => (
                 <li key={navigationItem.name}>
                   <Disclosure.Button
                     as="a"
