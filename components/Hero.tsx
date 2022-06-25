@@ -6,7 +6,7 @@ import HeroImage from "../public/images/nature.svg"
 
 const Hero = () => {
   return (
-    <div className="grid items-center grid-cols-1 gap-12 px-5 py-20 mx-auto justify-items-center md:grid-cols-2 xl:gap-18 max-w-7xl">
+    <div className="grid items-center grid-cols-1 gap-12 px-5 py-20 mx-auto mb-10 justify-items-center md:grid-cols-2 xl:gap-18 max-w-7xl">
       <motion.div
         className="text-center md:text-left"
         initial={{
