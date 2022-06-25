@@ -6,7 +6,7 @@ import { destinations } from "../data"
 
 const Destinations = () => {
   return (
-    <div className="px-5 mx-auto max-w-7xl">
+    <div className="px-5 mx-auto mb-8 max-w-7xl">
       <h2 className="mb-8 text-5xl font-semibold text-center">
         Choose your <span className="text-orange-600">destination</span>
       </h2>
